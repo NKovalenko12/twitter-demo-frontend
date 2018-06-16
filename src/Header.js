@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import home from "./img/Icon_ Home.svg";
-import messages from "./img/Icon_ Messages.svg";
-import moments from "./img/Icon_ Moments.svg";
-import notifications from "./img/Icon_ Notifications.svg";
-import tlogo from "./img/Icon_ Twitter Logo.svg";
-import magnifier from "./img/Icon_ Magnifier.svg";
-import avatar from "./img/Avatar.svg";
+import home from "./img/IconHome.svg";
+import messages from "./img/IconMessages.svg";
+import moments from "./img/IconMoments.svg";
+import notifications from "./img/IconNotifications.svg";
+import tlogo from "./img/IconTwitterLogo.svg";
+import magnifier from "./img/IconMagnifier.svg";
+import avatar from "./img/MiniAvatar.svg";
 
 const Wrap = styled.header`
   width: 100%;
