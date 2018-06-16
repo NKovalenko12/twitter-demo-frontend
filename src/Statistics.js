@@ -6,6 +6,7 @@ const Wrap = styled.div`
   width: auto;
   height: 60px;
   box-shadow: 0px 2px 2px #b0b8be;
+  background: white;
 `;
 
 const StatBlock = styled.div`

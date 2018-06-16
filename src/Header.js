@@ -51,7 +51,6 @@ const TwitterLogo = styled.img`
 const RightFunctionality = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-right: 155px;
 `;
 const SearchInput = styled.input`
   box-sizing: border-box;
