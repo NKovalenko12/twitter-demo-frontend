@@ -1,33 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Redirect } from "react-router";
 import { Helmet } from "react-helmet";
-import Header from "./Header";
-import Wallpaper from "./Wallpaper";
-import Statistics from "./Statistics";
-import TweetList from "./TweetList";
-import ProfileInfo from "./ProfileInfo";
 
-class App extends Component {
-  render() {
-    return (
+import EveryInteract from "./EveryInteract";
+
+const App = props => (
+  <div>
+    <Helmet>
+      <title>Twitter</title>
+    </Helmet>
+    <BrowserRouter>
       <div>
-        <Header />
-        <Wallpaper />
-        <Statistics />
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3">
-              <ProfileInfo />
-            </div>
-            <div className="col-lg-6">
-              <TweetList />
-            </div>
-          </div>
-        </div>
+        <Route render={() => <Redirect to="/everyinteract" />} />
+        <Route path="/everyinteract" component={EveryInteract} />
       </div>
-    );
-  }
-}
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
