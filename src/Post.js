@@ -5,7 +5,7 @@ import Preview from "./Preview";
 import pinned from "./img/IconPinned.svg";
 import comments from "./img/IconComments.svg";
 import retweets from "./img/IconRetweet.svg";
-import loves from "./img/IconLoves.svg";
+import likes from "./img/IconLikes.svg";
 import envelope from "./img/IconEnvelope.svg";
 import avatar from "./img/MiniAvatar.svg";
 
@@ -31,7 +31,7 @@ const AvatarBlock = styled.div`
 
 const Name = styled.span`
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   color: #292f33;
 `;
@@ -81,8 +81,8 @@ const Action = styled.div`
 const ActionCount = styled.span`
   font-size: 13px;
   letter-spacing: -0.2px;
-  color: ${props => (props.liked ? "#E2264D" : "#667580")};
-  font-weight: ${props => (props.liked ? "bold" : "normal")};
+  color: #667580;
+  font-weight: normal;
 `;
 
 const ActionBlock = styled.div`
@@ -142,12 +142,15 @@ const Post = props => (
       <ActionBlock>
         <Action>
           <Icon src={comments} />
+          <ActionCount>{props.comments}</ActionCount>
         </Action>
         <Action>
           <Icon src={retweets} />
+          <ActionCount>{props.retweets}</ActionCount>
         </Action>
         <Action>
-          <Icon src={loves} />
+          <Icon src={likes} />
+          <ActionCount>{props.likes}</ActionCount>
         </Action>
         <Action>
           <Icon src={envelope} />

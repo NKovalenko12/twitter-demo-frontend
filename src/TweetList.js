@@ -15,6 +15,7 @@ const Link = styled.a`
   color: #72c4f6;
 `;
 
+//React router seems very big trouble to me
 const ListLink = styled.a`
   text-decoration: none;
   font-size: 18px;
@@ -55,7 +56,6 @@ const TweetList = props => (
       name="Every Interaction"
       profileName="EveryInteract"
       time="2 Mar 2015"
-      comments={0}
       retweets={17}
       likes={47}
       bigFont
@@ -86,9 +86,6 @@ const TweetList = props => (
       name="Every Interaction"
       profileName="EveryInteract"
       time="Nov 18"
-      comments={0}
-      retweets={0}
-      likes={0}
       bigFont={false}
       preview={previewToVilijamis}
     >

@@ -1,6 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import tick from "./img/Tick.svg";
+import location from "./img/IconLocation.svg";
+import link from "./img/IconLink.svg";
+import joined from "./img/IconJoined.svg";
+
+const Text = styled.span`
+  line-height: 28px;
+  font-size: 14px;
+  color: #657786;
+`;
+
+const Line = styled.div`
+  display: flex;
+`;
+
+const Icon = styled.img`
+  margin-right: 13px;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1d81c2;
+`;
 
 const Wrap = styled.div`
   margin-top: 41px;
@@ -74,7 +98,18 @@ const ProfileInfo = props => (
       UX Design studio focused problem<br />solving creativity. Design to us is
       how<br />can we make things *work* amazing.
     </Description>
-    <div>Infoline</div>
+    <Line>
+      <Icon src={location} />
+      <Text>London, UK</Text>
+    </Line>
+    <Line>
+      <Icon src={link} />
+      <Link>everyinteraction.com</Link>
+    </Line>
+    <Line>
+      <Icon src={joined} />
+      <Text>Joined May 2008</Text>
+    </Line>
     <ButtonBlock>
       <ContactButton>Tweet to</ContactButton>
       <ContactButton>Message</ContactButton>

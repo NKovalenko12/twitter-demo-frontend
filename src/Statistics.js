@@ -30,8 +30,8 @@ const StatTab = styled.div`
 const StatLink = styled.a`
   line-height: 21px;
   font-size: 12px;
+  font-weight: 700;
   text-align: center;
-  font-weight: 500;
   color: #707e88;
 `;
 
@@ -39,7 +39,7 @@ const StatNumber = styled.span`
   line-height: 21px;
   font-size: 18px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   color: #707e88;
   border: none;
   cursor: pointer;
