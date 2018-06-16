@@ -54,7 +54,6 @@ const RightFunctionality = styled.div`
   margin-right: 155px;
 `;
 const SearchInput = styled.input`
-  background: #ffffff;
   box-sizing: border-box;
   border: 1px solid #e6ecf0;
   border-radius: 100px;
@@ -79,6 +78,7 @@ const TweetButton = styled.button`
   height: 32px;
   line-height: 14px;
   font-size: 14px;
+  font-weight: 600;
   text-align: center;
   color: #ffffff;
   background: #1da1f2;
