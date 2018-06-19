@@ -8,7 +8,7 @@ const TemporaryRoute = ({ component: ProfilePage }) => (
   <Route
     render={props => (
       <ProfilePage
-        //Дальше как план передавть всю инфу(твиты, профайл инфо, все) из json, и так можно завести и твой профиль.
+        //Дальше как план передавать всю инфу(твиты, профайл инфо, все) из json, и так можно завести и твой профиль.
         desc="Every Interaction Profile Page"
         content="Последние твиты от Every Interaction (@EveryInteract). A user-experience design studio in London. We specialise in making the complex simple, the confusing intuitive and the perplexing obvious. London, UK"
       />
