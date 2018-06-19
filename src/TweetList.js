@@ -15,7 +15,7 @@ const Link = styled.a`
   color: #72c4f6;
 `;
 
-//React router seems very big trouble to me
+//NavLink к среде сделаю.
 const ListLink = styled.a`
   text-decoration: none;
   font-size: 18px;

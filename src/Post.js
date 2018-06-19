@@ -92,9 +92,7 @@ const ActionBlock = styled.div`
 `;
 
 const Pinned = styled.span`
-  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 12px;
-  letter-spacing: -0.2px;
   color: #707e88;
   margin-bottom: 4px;
   display: block;
@@ -112,20 +110,20 @@ const PostedImage = styled.img`
 const Post = props => (
   <Wrap>
     <AvatarBlock pinned={props.pinned}>
-      {props.pinned && <Pin src={pinned} />}
+      {props.pinned ? <Pin src={pinned} /> : null}
       <AvatarImage src={avatar} />
     </AvatarBlock>
     <PostBlock>
       <div>
-        {props.pinned && <Pinned>Pinned Tweet</Pinned>}
+        {props.pinned ? <Pinned>Pinned Tweet</Pinned> : null}
         <Name>{props.name} </Name>
         <ProfileName>
           @{props.profileName} • {props.time}
         </ProfileName>
       </div>
-      {props.bigFont && <BigText>{props.children}</BigText>}
-      {!props.bigFont && <Text>{props.children}</Text>}
-      {props.preview && (
+      {props.bigFont ? <BigText>{props.children}</BigText> : null}
+      {!props.bigFont ? <Text>{props.children}</Text> : null}
+      {props.preview ? (
         <Preview
           image={props.preview.image}
           link={props.preview.link}
@@ -133,12 +131,12 @@ const Post = props => (
         >
           {props.preview.description}
         </Preview>
-      )}
-      {props.image && (
+      ) : null}
+      {props.image ? (
         <ImageBlock>
           <PostedImage src={props.image} />
         </ImageBlock>
-      )}
+      ) : null}
       <ActionBlock>
         <Action>
           <Icon src={comments} />

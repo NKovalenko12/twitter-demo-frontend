@@ -2,8 +2,19 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Redirect } from "react-router";
 import { Helmet } from "react-helmet";
+import ProfilePage from "./ProfilePage";
 
-import EveryInteract from "./EveryInteract";
+const TemporaryRoute = ({ component: ProfilePage }) => (
+  <Route
+    render={props => (
+      <ProfilePage
+        //Дальше как план передавть всю инфу(твиты, профайл инфо, все) из json, и так можно завести и твой профиль.
+        desc="Every Interaction Profile Page"
+        content="Последние твиты от Every Interaction (@EveryInteract). A user-experience design studio in London. We specialise in making the complex simple, the confusing intuitive and the perplexing obvious. London, UK"
+      />
+    )}
+  />
+);
 
 const App = props => (
   <div>
@@ -12,8 +23,8 @@ const App = props => (
     </Helmet>
     <BrowserRouter>
       <div>
-        <Route render={() => <Redirect to="/everyinteract" />} />
-        <Route path="/everyinteract" component={EveryInteract} />
+        <Redirect from="/" to="/EveryInteract" />
+        <TemporaryRoute path="/EveryInteract" component={ProfilePage} />
       </div>
     </BrowserRouter>
   </div>
